@@ -10,7 +10,7 @@ This module is part of a larger collection. See
 [`syntro/silverstripe-elemental-bootstrap-collection`](https://github.com/syntro-opensource/silverstripe-elemental-bootstrap-collection)
 for details.
 
-Provides a simple section displaying sections.
+Provides a simple section displaying an accordion.
 
 ## Requirements
 
@@ -29,10 +29,6 @@ composer require syntro/silverstripe-elemental-bootstrap-accordionsection
 See [License](license.md)
 
 ## Documentation
-
-This Section only provides a base skeleton and without customization only renders
-thumbnail images. If you want to have a masonry layout or a lightbox, you will
-have to implement these in your theme
 
  * [Customize](docs/en/customizing.md)
 
