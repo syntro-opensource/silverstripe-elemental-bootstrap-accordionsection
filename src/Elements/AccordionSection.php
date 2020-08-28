@@ -62,16 +62,9 @@ class AccordionSection extends BootstrapSectionBaseElement
      * @config
      * @var array
      */
-    private static $background_colors = [
-        'default' => 'Default',
-        'light' => 'Lightgrey',
-        'dark' => 'Dark',
-    ];
+    private static $background_colors = [];
 
-    private static $text_colors = [
-        'default' => 'Default',
-        'white' => 'White'
-    ];
+    private static $text_colors = [];
 
     /**
      * Color mapping from background color. This is mainly intended
@@ -108,6 +101,12 @@ class AccordionSection extends BootstrapSectionBaseElement
     {
         $this->beforeUpdateCMSFields(function ($fields) {
 
+            $fields->dataFieldByName('Content')
+                ->setTitle(_t(
+                    __CLASS__ . '.CONTENT',
+                    'Content'
+                ));
+
             if ($this->ID) {
                 /** @var GridField $panels */
                 $panels = $fields->dataFieldByName('AccordionPanels');
@@ -133,7 +132,7 @@ class AccordionSection extends BootstrapSectionBaseElement
      */
     public function getSummary()
     {
-        return DBField::create_field('HTMLText', $this->Content)->Summary(20);
+        return implode(', ', $this->AccordionPanels()->map('Title')->keys());
     }
 
     /**

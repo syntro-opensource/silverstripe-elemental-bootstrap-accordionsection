@@ -1,4 +1,4 @@
-# SilverStripe elemental bootstrap staff section
+# SilverStripe elemental bootstrap accordion section
 
 [![Build Status](https://travis-ci.com/syntro-opensource/silverstripe-elemental-bootstrap-accordionsection.svg?branch=master)](https://travis-ci.com/syntro-opensource/silverstripe-elemental-bootstrap-accordionsection)
 [![phpstan](https://img.shields.io/badge/PHPStan-enabled-success)](https://github.com/phpstan/phpstan)
@@ -30,23 +30,14 @@ See [License](license.md)
 
 ## Documentation
 
- * [Customize](docs/en/customizing.md)
+By default, this section renders a simple accordion, just like
+[this example](https://getbootstrap.com/docs/4.5/components/collapse/#accordion-example)
+directly taken from the bootstrap docs. Depending on your theme, you will have to
+change how this section is rendered.
 
-<!-- ## Example configuration (optional)
-If your module makes use of the config API in SilverStripe it's a good idea to provide an example config
- here that will get the module working out of the box and expose the user to the possible configuration options.
-
-Provide a yaml code example where possible.
-
-```yaml
-
-Page:
-  config_option: true
-  another_config:
-    - item1
-    - item2
-
-``` -->
+As of right now, we do not provide any settings concerning the colors of the
+accordion directly, as this depends heavily on the way you are implementing
+it in the frontend.
 
 ## Maintainers
  * Matthias Leutenegger <hello@syntro.ch>

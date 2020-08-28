@@ -23,7 +23,7 @@
                             </h3>
                         </div>
                         <div class="collapse" id="accordion-{$Up.ID}-panel-$ID" aria-labelledby="accordion-{$Up.ID}-button-$ID" data-parent="#accordion-$Up.ID">
-                            <div class="card-body text-left">
+                            <div class="card-body text-left text-dark">
                                 <div class="row align-items-center">
                                     <% if Image %>
                                         <div class="col-12 col-md-6 col-lg-4 col-xl-3 mb-3 mb-md-0">
@@ -32,6 +32,13 @@
                                     <% end_if %>
                                     <div class="col">
                                         $Content
+                                        <% if CTALink %>
+                                            <% with CTALink %>
+                                                <a {$IDAttr} class="mx-1 text-$Up.LinkColor" href="{$LinkURL}"{$TargetAttr}>
+                                                    {$Title}
+                                                </a>
+                                            <% end_with %>
+                                        <% end_if %>
                                     </div>
                                 </div>
                             </div>

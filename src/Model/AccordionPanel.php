@@ -5,6 +5,8 @@ use SilverStripe\Forms\TextField;
 use SilverStripe\Assets\Image;
 use SilverStripe\Forms\TextareaField;
 use SilverStripe\AssetAdmin\Forms\UploadField;
+use gorriecoe\Link\Models\Link;
+use gorriecoe\LinkField\LinkField;
 use Syntro\SilverStripeElementalBaseitems\Model\BaseItem;
 use Syntro\SilverStripeElementalBootstrapAccordionSection\Elements\AccordionSection;
 
@@ -37,18 +39,43 @@ class AccordionPanel extends BaseItem
     private static $has_one = [
         'Section' => AccordionSection::class,
         'Image' => Image::class,
+        'CTALink' => Link::class
     ];
 
     /**
      * @var array
      */
     private static $owns = [
-        'Image'
+        'Image',
+        'CTALink'
     ];
 
     private static $defaults = [
         'ShowTitle' => true
     ];
+
+    private static $summary_fields = [
+        'Image.StripThumbnail',
+        'Title',
+        'Content.Summary'
+    ];
+
+    /**
+     * fieldLabels - apply labels
+     *
+     * @param  boolean $includerelations = true description
+     * @return array                         description
+     */
+    public function fieldLabels($includerelations = true)
+    {
+        $labels = parent::fieldLabels($includerelations);
+        $labels['Image.StripThumbnail'] = _t(__CLASS__ . '.IMAGE', 'Image');
+        $labels['Image'] = _t(__CLASS__ . '.IMAGE', 'Image');
+        $labels['Title'] = _t(__CLASS__ . '.TITLE', 'Title');
+        $labels['Content.Summary'] = _t(__CLASS__ . '.SUMMARY', 'Summary');
+        $labels['CTALink'] = _t(__CLASS__ . '.CALLTOACTIONLINK', 'Call to action Link');
+        return $labels;
+    }
 
     /**
      * @return FieldList
@@ -60,17 +87,35 @@ class AccordionPanel extends BaseItem
             $fields->removeByName([
                 'Sort',
                 'SectionID',
+                'CTALinkID'
             ]);
+
+            $fields->dataFieldByName('Content')
+                ->setTitle(_t(
+                    __CLASS__ . '.CONTENT',
+                    'Content'
+                ));
 
             // Add Image Upload Field
             $fields->addFieldToTab(
                 'Root.Main',
                 $imageField = UploadField::create(
                     'Image',
-                    'Image'
-                )
+                    $this->fieldLabel('Image')
+                ),
+                'Content'
             );
             $imageField->setFolderName('Uploads/AccordionPanels');
+
+
+            $fields->addFieldToTab(
+                'Root.Main',
+                LinkField::create(
+                    'CTALink',
+                    $this->fieldLabel('CTALink'),
+                    $this
+                )
+            );
 
             // Add content field
             // $fields->addFieldToTab(

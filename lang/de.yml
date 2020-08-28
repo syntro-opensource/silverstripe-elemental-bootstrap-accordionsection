@@ -1,3 +1,10 @@
 de:
   Syntro\SilverStripeElementalBootstrapAccordionSection\Elements\AccordionSection:
     BlockType: Accordion Abschnitt
+    CONTENT: Inhalt
+  Syntro\SilverStripeElementalBootstrapAccordionSection\Model\AccordionPanel:
+    CALLTOACTIONLINK: Call to action Link
+    CONTENT: Inhalt
+    IMAGE: Bild
+    TITLE: Titel
+    SUMMARY: Zusammenfassung
