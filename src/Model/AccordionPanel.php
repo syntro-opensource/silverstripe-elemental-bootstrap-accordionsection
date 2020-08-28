@@ -65,8 +65,8 @@ class AccordionPanel extends BaseItem
     /**
      * fieldLabels - apply labels
      *
-     * @param  boolean $includerelations = true description
-     * @return array                         description
+     * @param  boolean $includerelations = true
+     * @return array
      */
     public function fieldLabels($includerelations = true)
     {
