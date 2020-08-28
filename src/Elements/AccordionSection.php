@@ -94,6 +94,8 @@ class AccordionSection extends BootstrapSectionBaseElement
         'AccordionPanels'
     ];
 
+
+
     /**
      * @return FieldList
      */
