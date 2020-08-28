@@ -1,9 +1,11 @@
 <?php
+
 namespace Syntro\SilverStripeElementalBootstrapAccordionSection\Model;
 
 use SilverStripe\Forms\TextField;
 use SilverStripe\Assets\Image;
 use SilverStripe\Forms\TextareaField;
+use SilverStripe\Forms\FieldList;
 use SilverStripe\AssetAdmin\Forms\UploadField;
 use gorriecoe\Link\Models\Link;
 use gorriecoe\LinkField\LinkField;

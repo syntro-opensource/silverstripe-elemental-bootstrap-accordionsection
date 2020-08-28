@@ -13,7 +13,6 @@ use Symbiote\GridFieldExtensions\GridFieldOrderableRows;
 use Syntro\SilverStripeElementalBaseitems\Elements\BootstrapSectionBaseElement;
 use Syntro\SilverStripeElementalBootstrapAccordionSection\Model\AccordionPanel;
 
-
 /**
  *  Bootstrap based Accordion section
  *
@@ -123,7 +122,6 @@ class AccordionSection extends BootstrapSectionBaseElement
 
                 $fields->addFieldToTab('Root.Main', $panels);
             }
-
         });
 
         return parent::getCMSFields();
@@ -147,6 +145,11 @@ class AccordionSection extends BootstrapSectionBaseElement
         return $blockSchema;
     }
 
+    /**
+     * getType - get the element type
+     *
+     * @return string
+     */
     public function getType()
     {
         return _t(__CLASS__ . '.BlockType', 'Accordion Section');
