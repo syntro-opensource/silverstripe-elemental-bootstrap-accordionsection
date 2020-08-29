@@ -39,6 +39,8 @@ As of right now, we do not provide any settings concerning the colors of the
 accordion directly, as this depends heavily on the way you are implementing
 it in the frontend.
 
+All configuration options follow [the base items config](https://github.com/syntro-opensource/silverstripe-elemental-bootstrap-baseitems#documentation).
+
 ## Maintainers
  * Matthias Leutenegger <hello@syntro.ch>
 

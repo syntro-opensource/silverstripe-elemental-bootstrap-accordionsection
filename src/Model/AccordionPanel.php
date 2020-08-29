@@ -118,16 +118,6 @@ class AccordionPanel extends BaseItem
                     $this
                 )
             );
-
-            // Add content field
-            // $fields->addFieldToTab(
-            //     'Root.Main',
-            //     TextareaField::create(
-            //         'Content',
-            //         'Content'
-            //     ),
-            //     'CTALink'
-            // );
         });
 
         return parent::getCMSFields();
