@@ -132,7 +132,15 @@ class AccordionSection extends BootstrapSectionBaseElement
      */
     public function getSummary()
     {
-        return implode(', ', $this->AccordionPanels()->map('Title')->keys());
+        return sprintf(
+            '%s: "%s"',
+            _t(
+                __CLASS__ . '.SUMMARY',
+                'one panel|{count} panels',
+                ['count' => $this->AccordionPanels()->count()]
+            ),
+            implode('", "', $this->AccordionPanels()->map('Title')->keys())
+        );
     }
 
     /**

@@ -2,6 +2,9 @@ de:
   Syntro\SilverStripeElementalBootstrapAccordionSection\Elements\AccordionSection:
     BlockType: Accordion Abschnitt
     CONTENT: Inhalt
+    SUMMARY:
+      one: 'Ein Panel'
+      other: '{count} Panels'
   Syntro\SilverStripeElementalBootstrapAccordionSection\Model\AccordionPanel:
     CALLTOACTIONLINK: Call to action Link
     CONTENT: Inhalt
