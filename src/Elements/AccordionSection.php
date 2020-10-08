@@ -10,7 +10,7 @@ use SilverStripe\Forms\GridField\GridField;
 use SilverStripe\Forms\GridField\GridFieldAddExistingAutocompleter;
 use SilverStripe\Forms\GridField\GridFieldDeleteAction;
 use Symbiote\GridFieldExtensions\GridFieldOrderableRows;
-use Syntro\SilverStripeElementalBaseitems\Elements\BootstrapSectionBaseElement;
+use DNADesign\Elemental\Models\BaseElement;
 use Syntro\SilverStripeElementalBootstrapAccordionSection\Model\AccordionPanel;
 
 /**
@@ -18,7 +18,7 @@ use Syntro\SilverStripeElementalBootstrapAccordionSection\Model\AccordionPanel;
  *
  * @author Matthias Leutenegger <hello@syntro.ch>
  */
-class AccordionSection extends BootstrapSectionBaseElement
+class AccordionSection extends BaseElement
 {
 
     private static $icon = 'elemental-icon-accordion';
