@@ -1,6 +1,4 @@
-
-<div class="py-5 container text-center">
-    <div class="row justify-content-center">
+    <div class="row justify-content-center text-center">
         <% if ShowTitle || Content %>
             <div class="col-12 col-md-10 col-lg-8 mb-4">
                 <% if ShowTitle %>
@@ -48,4 +46,3 @@
             </div>
         </div>
     </div>
-</div>
