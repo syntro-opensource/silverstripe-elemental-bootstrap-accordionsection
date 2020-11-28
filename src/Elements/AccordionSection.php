@@ -86,13 +86,6 @@ class AccordionSection extends BaseElement
         'AccordionPanels' => AccordionPanel::class
     ];
 
-    /**
-     * @var array
-     */
-    private static $owns = [
-        'AccordionPanels'
-    ];
-
 
 
     /**
